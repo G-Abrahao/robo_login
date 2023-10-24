@@ -5,6 +5,6 @@ with sync_playwright() as p:
     page = browser.new_page()
     page.goto("https://ava.mg.senac.br/edu/")
     page.fill('xpath=//*[@id="username"]', "seu_usuario@senacminas.edu.br")
-    page.fill('//*[@id="password"]',"sua senha") 
+    page.fill('xpath=//*[@id="password"]',"sua senha") 
     page.locator('xpath=//*[@id="boxForm"]/div/form/div[3]/button').click()
     page.wait_for_timeout(60000)
